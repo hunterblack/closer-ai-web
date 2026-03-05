@@ -152,29 +152,8 @@ body {
 
 /* Trust bar */
 .trust-bar {
-  padding: 48px 0;
-  border-top: 1px solid var(--border);
-}
-
-.trust-card {
-  position: relative;
-  border-radius: 20px;
-  padding: 40px 32px;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(217,119,6,0.12), rgba(234,88,12,0.06));
-  border: 1px solid rgba(217,119,6,0.3);
-  overflow: hidden;
-}
-
-.trust-card-glow {
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 400px;
-  height: 200px;
-  background: radial-gradient(ellipse, rgba(217,119,6,0.2), transparent 70%);
-  pointer-events: none;
+  background: linear-gradient(135deg, var(--orange-start), var(--orange-end));
+  padding: 24px;
 }
 
 .trust-items {
@@ -182,9 +161,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 16px;
-  position: relative;
+  gap: 20px;
 }
 
 .trust-item {
@@ -194,20 +171,13 @@ body {
 }
 
 .trust-divider {
-  color: rgba(217,119,6,0.5);
+  color: rgba(255,255,255,0.4);
   font-size: 20px;
-}
-
-.trust-subtext {
-  font-size: 14px;
-  color: var(--text-muted);
-  position: relative;
 }
 
 @media (max-width: 600px) {
   .trust-divider { display: none; }
   .trust-items { gap: 12px; }
-  .trust-card { padding: 32px 20px; }
 }
 
 /* Early access form */
