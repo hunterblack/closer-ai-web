@@ -154,6 +154,7 @@ body {
 .trust-bar {
   position: relative;
   padding: 40px 24px;
+  margin: 0 0 48px;
   text-align: center;
   overflow: hidden;
   background: #161412;
