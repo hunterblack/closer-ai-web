@@ -150,6 +150,45 @@ body {
   color: var(--text-subtle);
 }
 
+/* Early access form */
+.early-access-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.early-access-form {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.early-access-form input[type="email"] {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 16px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  width: 280px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.early-access-form input[type="email"]::placeholder {
+  color: var(--text-subtle);
+}
+
+.early-access-form input[type="email"]:focus {
+  border-color: var(--orange-start);
+}
+
 /* Features */
 .features {
   padding: 80px 0;
