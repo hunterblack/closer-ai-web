@@ -152,32 +152,36 @@ body {
 
 /* Trust bar */
 .trust-bar {
-  background: linear-gradient(135deg, var(--orange-start), var(--orange-end));
-  padding: 24px;
+  position: relative;
+  padding: 72px 24px;
+  text-align: center;
+  overflow: hidden;
+  background: #161412;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
-.trust-items {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+.trust-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(217,119,6,0.18), transparent 70%);
+  pointer-events: none;
 }
 
-.trust-item {
-  font-size: 16px;
-  font-weight: 700;
-  color: white;
-}
-
-.trust-divider {
-  color: rgba(255,255,255,0.4);
-  font-size: 20px;
-}
-
-@media (max-width: 600px) {
-  .trust-divider { display: none; }
-  .trust-items { gap: 12px; }
+.trust-statement {
+  position: relative;
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
 }
 
 /* Early access form */
