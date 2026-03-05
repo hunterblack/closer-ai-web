@@ -150,6 +150,36 @@ body {
   color: var(--text-subtle);
 }
 
+/* Trust bar */
+.trust-bar {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+}
+
+.trust-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.trust-item {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.trust-divider {
+  color: var(--border);
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .trust-divider { display: none; }
+  .trust-items { gap: 12px; }
+}
+
 /* Early access form */
 .early-access-label {
   font-size: 14px;
