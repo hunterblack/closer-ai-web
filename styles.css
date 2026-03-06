@@ -5,15 +5,15 @@
 }
 
 :root {
-  --bg: #1C1917;
-  --bg-card: #292524;
-  --bg-card-hover: #312E2B;
-  --border: #44403C;
-  --text: #FFFFFF;
+  --bg: #0F0F10;
+  --bg-card: #1C1C1E;
+  --bg-card-hover: #242426;
+  --border: #3A3A3C;
+  --text: #F2F2F2;
   --text-muted: #A8A29E;
   --text-subtle: #78716C;
-  --orange-start: #D97706;
-  --orange-end: #EA580C;
+  --orange-start: #E07830;
+  --orange-end: #D05A1A;
   --radius: 16px;
 }
 
