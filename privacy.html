@@ -77,10 +77,12 @@
         <p>Purpose: Cloud infrastructure, database hosting, file storage, and authentication. Data shared: Account information, encrypted audio recordings, transcripts, and AI-generated content.</p>
         <h3>5.2 Deepgram</h3>
         <p>Purpose: Speech-to-text transcription. Data shared: Audio recordings are sent for transcription processing. Deepgram processes the audio and returns the transcript text.</p>
-        <h3>5.3 AI Language Model Provider</h3>
-        <p>Purpose: Conversation analysis, summary generation, and coaching insights. Data shared: Conversation transcripts (text only, NOT audio) are sent for AI analysis. The AI provider does not receive your audio recordings.</p>
+        <h3>5.3 AI Language Model Provider (Anthropic)</h3>
+        <p>Purpose: Conversation analysis, summary generation, and coaching insights. Data shared: Conversation transcripts, your name and partner's name, relationship goals, and aggregated communication patterns are sent for AI analysis and coaching. The original audio recording is NOT sent. Anthropic (Claude AI) processes this data under a zero-data-retention policy for API usage.</p>
         <h3>5.4 Resend</h3>
         <p>Purpose: Transactional email delivery (partner invitations, account notifications). Data shared: Email addresses and names necessary for email delivery.</p>
+        <h3>5.5 Sentry</h3>
+        <p>Purpose: Crash reporting, error monitoring, and performance tracking. Data shared: Anonymized error reports including app version, device OS, stack traces, and session replay recordings. Session replays mask all text and images — no conversation content, transcripts, or chat messages are captured. Sentry does not receive your audio recordings, transcripts, or AI-generated content.</p>
       </div>
 
       <div class="legal-section">
