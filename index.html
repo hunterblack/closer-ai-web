@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
@@ -20,127 +22,190 @@
         <img src="/icon.png?v=3" alt="Closer" class="nav-logo-icon" />
         <span class="nav-logo-text">Closer</span>
       </div>
-      <a href="#early-access" class="btn btn-small">Request Access</a>
+      <a href="#early-access" class="btn btn-small">Request access</a>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <div class="badge">FOR COUPLES</div>
-      <h1 class="hero-title">Great relationships don't happen by accident&nbsp;— they are built.</h1>
-      <p class="hero-subtitle">Closer analyzes your real conversations — even the difficult ones — to help you and your partner understand one another better and deepen your connection.</p>
-      <p class="hero-disclaimer">Closer is an educational tool — not therapy. It cannot diagnose, treat, or assess any mental health or relational condition.</p>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="badge">
+        <img src="/hearts.png" alt="" class="badge-icon" />
+        <span>FOR COUPLES</span>
+      </div>
+      <h1 class="hero-title">Great relationships don't happen by accident — they're <em>built</em>.</h1>
+      <p class="hero-subtitle">Closer listens to your real conversations — even the difficult ones — and reflects them back, so you and your partner understand each other better and grow closer.</p>
+      <p class="hero-disclaimer">An educational tool — not therapy. Closer cannot diagnose, treat, or assess any mental health or relational condition, and its AI-generated insights may not always be accurate.</p>
       <div class="hero-cta" id="early-access">
-        <p class="early-access-label">Be among the first to try Closer</p>
         <form class="early-access-form" action="https://formspree.io/f/mojkayze" method="POST">
           <input type="email" name="email" placeholder="Your email address" required />
-          <button type="submit" class="btn btn-large">Request Early Access</button>
+          <button type="submit" class="btn btn-large">Request early access</button>
         </form>
         <p class="hero-note">We'll reach out when access is available.</p>
       </div>
     </div>
   </section>
 
+  <!-- Phone showcase -->
+  <section class="phone-showcase">
+    <div class="phone-row">
+      <img src="/screen-insights.png" alt="Closer insights screen" class="phone phone-side phone-left" />
+      <img src="/screen-home.png" alt="Closer home screen" class="phone phone-center" />
+      <img src="/screen-chat.png" alt="Closer chat screen" class="phone phone-side phone-right" />
+    </div>
+  </section>
+
   <!-- Features -->
   <section class="features">
     <div class="container">
-      <h2 class="section-title">Everything you need to grow closer</h2>
-      <p class="section-subtitle">Closer is an educational tool — not therapy. It helps couples build self-awareness and communication skills through reflection on their own conversations.</p>
-    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">HOW CLOSER HELPS</div>
+        <h2 class="section-title">Everything you need to grow closer</h2>
+        <p class="section-subtitle">A learning tool, not therapy. Closer builds self-awareness and communication skills through reflection on your own conversations.</p>
+      </div>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">🎙️</div>
-          <h3>Record &amp; Transcribe</h3>
-          <p>Record conversations directly in the app or share audio from Voice Memos. Closer transcribes everything with speaker identification.</p>
+          <div class="feature-icon-badge" style="background: rgba(224,120,48,0.12);">
+            <ion-icon name="mic-outline" style="color: var(--action-soft);"></ion-icon>
+          </div>
+          <h3>Record &amp; transcribe</h3>
+          <p>Record in the app or share audio from Voice Memos. Closer transcribes everything with speaker identification.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🧠</div>
-          <h3>AI-Powered Insights</h3>
-          <p>Grounded in established communication research, Closer reflects what was said back to you so you can notice your own patterns.</p>
+          <div class="feature-icon-badge" style="background: rgba(124,58,237,0.14);">
+            <ion-icon name="sparkles-outline" style="color: var(--ai-text);"></ion-icon>
+          </div>
+          <h3>AI-powered insights</h3>
+          <p>Grounded in communication research, Closer reflects what was said so you notice your own patterns.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">💬</div>
-          <h3>Chat with Your AI Coach</h3>
-          <p>Have a conversation with your AI relationship coach about your actual recordings. Ask questions, explore patterns, get personalized guidance.</p>
+          <div class="feature-icon-badge" style="background: rgba(124,58,237,0.14);">
+            <ion-icon name="chatbubble-ellipses-outline" style="color: var(--ai-text);"></ion-icon>
+          </div>
+          <h3>Chat with your AI coach</h3>
+          <p>Talk through your actual recordings. Ask questions, explore patterns, and get personalized guidance.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">📈</div>
-          <h3>Track Your Progress</h3>
-          <p>Reflect on how your conversations evolve over time. Closer tracks themes across recordings so you can see where you've focused your attention.</p>
+          <div class="feature-icon-badge" style="background: rgba(52,211,153,0.12);">
+            <ion-icon name="trending-up-outline" style="color: var(--growth);"></ion-icon>
+          </div>
+          <h3>Track your progress</h3>
+          <p>See how your conversations evolve. Closer tracks themes across recordings so growth is visible over time.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🔬</div>
-          <h3>Research-Based</h3>
-          <p>Built on established communication research and frameworks used by communication professionals.</p>
+          <div class="feature-icon-badge" style="background: rgba(168,162,158,0.1);">
+            <ion-icon name="flask-outline" style="color: var(--text-2);"></ion-icon>
+          </div>
+          <h3>Research-based</h3>
+          <p>Built on established communication research and best practices.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon">🎓</div>
-          <h3>Built to Educate</h3>
-          <p>Closer is a learning tool, not therapy. It teaches communication concepts through your own real conversations so the lessons actually stick.</p>
+          <div class="feature-icon-badge" style="background: rgba(168,162,158,0.1);">
+            <ion-icon name="school-outline" style="color: var(--text-2);"></ion-icon>
+          </div>
+          <h3>Built to educate</h3>
+          <p>A learning tool, not therapy. It teaches communication concepts through your own real conversations.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- How it works -->
-
   <section class="how">
-    <div class="container">
-      <h2 class="section-title">How it works</h2>
+    <div class="container container-narrow">
+      <div class="section-head">
+        <div class="eyebrow">THREE STEPS</div>
+        <h2 class="section-title">How it works</h2>
+      </div>
       <div class="steps">
         <div class="step">
-          <div class="step-number">1</div>
+          <div class="step-rail">
+            <div class="step-number">1</div>
+            <div class="step-divider"></div>
+          </div>
           <div class="step-content">
             <h3>Record a conversation</h3>
-            <p>Use the in-app recorder or share an existing audio file from Voice Memos.</p>
+            <p>Use the in-app recorder or share an existing audio file from Voice Memos — with both partners' consent.</p>
           </div>
         </div>
-        <div class="step-divider"></div>
         <div class="step">
-          <div class="step-number">2</div>
+          <div class="step-rail">
+            <div class="step-number">2</div>
+            <div class="step-divider"></div>
+          </div>
           <div class="step-content">
             <h3>Get your analysis</h3>
-            <p>Closer transcribes and analyzes the conversation using research-backed communication frameworks.</p>
+            <p>Closer transcribes and analyzes the conversation to surface patterns in how you communicate.</p>
           </div>
         </div>
-        <div class="step-divider"></div>
         <div class="step">
-          <div class="step-number">3</div>
+          <div class="step-rail">
+            <div class="step-number">3</div>
+          </div>
           <div class="step-content">
             <h3>Grow together</h3>
-            <p>Apply actionable takeaways, track patterns over time, and chat with your AI coach for deeper guidance.</p>
+            <p>Apply small, actionable takeaways, track patterns over time, and chat with your AI coach for deeper guidance.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Science -->
+  <section class="science">
+    <div class="container container-science">
+      <div class="eyebrow">GROUNDED IN RESEARCH</div>
+      <h2 class="section-title">Decades of relationship science, in your pocket</h2>
+      <p class="section-subtitle">Insights are grounded in established communication research — translated into something you can practice in your next conversation.</p>
+      <p class="science-disclaimer">Educational, not clinical. Closer does not provide therapy or any clinical service.</p>
+    </div>
+  </section>
+
   <!-- Privacy -->
   <section class="privacy">
     <div class="container">
-      <h2 class="section-title">Private &amp; secure by design</h2>
-      <p class="section-subtitle">Relationships require trust — and so does the tool you use to strengthen them.</p>
+      <div class="section-head">
+        <div class="eyebrow eyebrow-growth">PRIVATE BY DESIGN</div>
+        <h2 class="section-title">Built on trust</h2>
+        <p class="section-subtitle">Relationships require trust — and so does the tool you use to strengthen them.</p>
+      </div>
       <div class="privacy-grid">
         <div class="privacy-card">
-          <div class="feature-icon">🤝</div>
-          <h3>Dual consent required</h3>
-          <p>Both partners must explicitly approve before any recording can be made. One-sided recording is never allowed — Closer is built for mutual growth, not surveillance.</p>
+          <div class="privacy-icon-badge">
+            <ion-icon name="people-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Dual consent required</h3>
+            <p>Both partners must approve in-app before any recording starts. One-sided recording is never allowed in the app.</p>
+          </div>
         </div>
         <div class="privacy-card">
-          <div class="feature-icon">🔐</div>
-          <h3>Controlled access</h3>
-          <p>Transcripts and analyses are private by default. Each partner independently controls whether to share — nothing is visible to the other without explicit permission.</p>
+          <div class="privacy-icon-badge">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Controlled access</h3>
+            <p>Transcripts and analyses are private by default. Each partner independently controls whether to share.</p>
+          </div>
         </div>
         <div class="privacy-card">
-          <div class="feature-icon">🛡️</div>
-          <h3>Encrypted &amp; secure</h3>
-          <p>Your recordings and personal data are encrypted in transit and at rest. We never sell your data or use it to train AI models.</p>
+          <div class="privacy-icon-badge">
+            <ion-icon name="shield-checkmark-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>Encrypted &amp; secure</h3>
+            <p>Your recordings and data are encrypted in transit and at rest. We never sell your data or train AI on it.</p>
+          </div>
         </div>
         <div class="privacy-card">
-          <div class="feature-icon">🗑️</div>
-          <h3>You own your data</h3>
-          <p>Delete any recording, transcript, or your entire account at any time. Limited records may be retained where law requires — see our <a href="/privacy" style="color: inherit; text-decoration: underline;">Privacy Policy</a>.</p>
+          <div class="privacy-icon-badge">
+            <ion-icon name="trash-outline"></ion-icon>
+          </div>
+          <div>
+            <h3>You own your data</h3>
+            <p>Delete any recording, transcript, or your entire account at any time. Limited records may be retained where law requires. See our <a href="/privacy">Privacy Policy</a>.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -148,12 +213,13 @@
 
   <!-- CTA -->
   <section class="cta-section">
+    <div class="cta-glow"></div>
     <div class="container cta-inner">
-      <h2>Ready to grow closer?</h2>
-      <p>Download Closer and start understanding your relationship on a deeper level.</p>
+      <h2>Ready to grow <em>closer</em>?</h2>
+      <p>Be among the first to understand your relationship on a deeper level.</p>
       <form class="early-access-form" action="https://formspree.io/f/mojkayze" method="POST">
         <input type="email" name="email" placeholder="Your email address" required />
-        <button type="submit" class="btn btn-large">Request Early Access</button>
+        <button type="submit" class="btn btn-large">Request early access</button>
       </form>
       <p class="hero-note">We'll reach out when access is available.</p>
     </div>
@@ -163,7 +229,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="nav-logo">
-        <img src="/icon.png?v=3" alt="Closer" class="nav-logo-icon" />
+        <img src="/icon.png?v=3" alt="Closer" class="nav-logo-icon footer-logo-icon" />
         <span class="nav-logo-text">Closer</span>
       </div>
       <div class="footer-links">
