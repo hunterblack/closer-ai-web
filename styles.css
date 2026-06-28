@@ -260,6 +260,20 @@ ion-icon { visibility: visible; }
   border-color: var(--action-start);
 }
 
+.form-success {
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 14px;
+}
+
+.form-error {
+  flex-basis: 100%;
+  font-size: 13px;
+  color: #ff8a8a;
+  margin: 4px 0 0;
+}
+
 /* Phone showcase */
 .phone-showcase {
   max-width: 1000px;
