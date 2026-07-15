@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Usage Policy — Closer</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
+  <script defer src="/analytics.js"></script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" style="text-decoration:none;">
+        <div class="nav-logo">
+          <div class="nav-logo-icon">♥</div>
+          <span class="nav-logo-text">Closer</span>
+        </div>
+      </a>
+      <a href="https://apps.apple.com/app/id6759992824" class="btn btn-small" target="_blank">Download</a>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <h1 class="hero-title" style="font-size: clamp(28px, 4vw, 42px);">Data Usage Policy</h1>
+      <p class="hero-subtitle" style="font-size: 15px;">Last updated: July 14, 2026 &middot; Version 1.4</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 80px;">
+    <div class="container legal-content">
+
+      <div class="legal-section">
+        <h2>1. Purpose</h2>
+        <p>This Data Usage Policy provides a detailed guide to how your conversation data is collected, processed, stored, and shared within the Closer AI application. This policy supplements our Privacy Policy and is designed to give you full transparency into our data flows.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>2. Audio Recording Data Flow</h2>
+        <p>When you record a conversation, the following process occurs:</p>
+        <h3>2.1 Capture</h3>
+        <p>Audio is captured on your device using your device's microphone. Before any recording can begin, both partners must each enter their own private consent PIN on the device (dual consent). Recording requires a linked partner — there is no solo or single-person recording mode — so every recording carries the active, on-device consent of both partners. It remains your responsibility to ensure all parties consent as required by the recording laws in your jurisdiction.</p>
+        <h3>2.2 Upload &amp; Storage</h3>
+        <p>The recorded audio file is uploaded to Supabase Storage using an encrypted connection (TLS). Audio files are stored with encryption at rest and are protected by Row Level Security (RLS) policies, ensuring only you and your linked partner (if applicable) can access them.</p>
+        <h3>2.3 Transcription</h3>
+        <p>A Supabase Edge Function sends the audio recording to Deepgram for speech-to-text transcription. The resulting transcript text is stored in the database, associated with your recording. Deepgram processes the audio solely to produce the transcript, and we send the request with model-training opt-out enabled so your audio is not used to train Deepgram's models.</p>
+        <h3>2.4 Post-Transcription Audio Storage &amp; Retention</h3>
+        <p>After transcription is complete, your original audio file and transcript are stored in Supabase Storage according to the retention period you selected during onboarding (7 days, 30 days, 90 days, or 6 months). After that window expires, the audio file and raw transcript are permanently deleted. Your AI-generated insights and conversation patterns are kept indefinitely so your progress tracking continues to work even after the source recording is gone. You can also delete any recording manually at any time from the Conversations screen. If you prefer to keep recordings indefinitely, you can set this in Settings under Data &amp; Privacy. Audio files are never sent to AI analysis providers — only the text transcript is used for AI analysis.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>3. AI Analysis Data Flow</h2>
+        <p>After transcription, your conversation is analyzed by AI:</p>
+        <h3>3.1 What Is Sent to AI</h3>
+        <p>Only the conversation transcript (text) is sent to the AI language model provider for analysis. Your original audio recording is NOT sent to the AI provider.</p>
+        <h3>3.2 What AI Generates</h3>
+        <p>The AI produces a conversation summary highlighting key topics and themes, relationship insights based on communication patterns, and personalized coaching suggestions. These generated outputs are stored in the database and associated with your recording.</p>
+        <h3>3.3 AI Data Handling</h3>
+        <p>Our AI provider, Anthropic (Claude AI), processes your transcript solely to generate the requested analysis. Anthropic does not use this data to train its models, and retains API inputs and outputs for up to 30 days solely for safety and security purposes, after which they are deleted.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>4. Partner Data Sharing Model</h2>
+        <p>Closer AI supports partner account linking for shared access to relationship data:</p>
+        <h3>4.1 Partner Linking</h3>
+        <p>Partners are linked by email invitation. When both partners have created accounts and their email addresses match the invitation records, accounts are automatically linked.</p>
+        <h3>4.2 Automatic Summary Sharing</h3>
+        <p>When accounts are linked, AI-generated conversation summaries are automatically visible to both partners. This allows both partners to benefit from insights without requiring full transcript access.</p>
+        <h3>4.3 Transcript Mutual Approval</h3>
+        <p>Full conversation transcripts are only shared when both partners approve. Either partner may decline to share a transcript, and that decision is respected. This ensures both partners have control over the level of detail shared.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>5. Consent Mechanisms</h2>
+        <p>Closer AI implements multiple layers of consent to ensure you maintain control over your data:</p>
+        <h3>5.1 Onboarding Consent</h3>
+        <p>During onboarding, you are asked to acknowledge three consent checkboxes: consent to conversation analysis and AI processing, consent that both parties agree to recording and analysis, and agreement to the Terms of Service, Privacy Policy, and Data Usage Policy.</p>
+        <h3>5.2 Per-Recording Consent</h3>
+        <p>Before each recording begins, both partners must each enter their own private consent PIN on the same device. Recording requires a linked partner and is not available solo, so every conversation captured carries the active, on-device consent of both partners. You remain responsible for complying with the recording-consent laws in your jurisdiction.</p>
+        <h3>5.3 Transcript Mutual Approval</h3>
+        <p>Sharing full transcripts between partners requires explicit approval from both parties on a per-transcript basis.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>6. What We Do NOT Do</h2>
+        <p>To be clear about our data practices, we want to explicitly state what we do NOT do: we do NOT sell your data to any third party; we do NOT use your conversations to train AI models; we do NOT share identifiable conversation content with anyone other than your linked partner (with appropriate consent); we do NOT access your data without proper authentication and authorization; we do NOT use your conversation content for advertising or marketing purposes; and we do NOT share your data with third parties for their own purposes.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>7. Data Minimization</h2>
+        <p>We follow the principle of data minimization. We only collect information that is necessary to provide the service. Audio recordings are only created when you actively initiate a recording with consent. Transcripts are generated solely to enable AI analysis and your review. AI analysis is limited to generating summaries and insights relevant to your relationship goals. Account information collected during onboarding is limited to what is needed for the service to function.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>8. Data Retention &amp; Deletion</h2>
+        <p>You have full control over your data:</p>
+        <h3>8.1 Automatic Retention Policy</h3>
+        <p>Audio files and raw transcripts are automatically deleted after the retention period you chose during onboarding (7 days, 30 days, 90 days, or 6 months). You can change this at any time in Settings under Data &amp; Privacy. A "keep indefinitely" option is also available in Settings for users who want permanent access to the source recordings. Regardless of your retention setting, AI-generated insights, conversation patterns, and longitudinal tracking data are kept permanently to power your progress history.</p>
+        <h3>8.2 Individual Recording Deletion</h3>
+        <p>You can delete individual recordings — along with their audio, transcript, and AI-generated insights — at any time through the Conversations screen. Deletion is immediate and permanent. Either partner can request deletion of a shared recording unilaterally; no confirmation from the other partner is required.</p>
+        <h3>8.3 Account Deletion</h3>
+        <p>Deleting your account removes all of your data, including your profile, AI chat history, recordings, transcripts, summaries, and insights. If you are linked to a partner, deletion also unlinks the relationship and withdraws consent to retain shared recordings as described below: every recording attributed to the two of you is permanently deleted, regardless of which partner started it. Your partner's account and recordings not attributed to your relationship are not deleted. This action is permanent and cannot be undone.</p>
+        <h3>8.4 Partner Unlinking</h3>
+        <p>Keeping shared recordings requires both partners' consent. When either partner unlinks, that consent is withdrawn: all recordings the two of you made together — including audio, transcripts, and AI-generated analyses — are permanently deleted from both accounts. This deletion is immediate and cannot be undone. If you both want to keep a copy, use the partner-approved data export in Settings before unlinking. Unlinking also revokes all ongoing access to each other's data.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>9. Security Measures</h2>
+        <p>We implement comprehensive security measures to protect your data: all data is transmitted using TLS (Transport Layer Security) encryption; stored data, including audio files and transcripts, is encrypted at rest; Supabase Row Level Security (RLS) ensures users can only access their own data and authorized shared data; authentication is required for all data operations; our service providers maintain their own security certifications and practices; and we conduct regular security reviews and monitoring.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>10. Third-Party Data Processing</h2>
+        <p>Our third-party service providers process your data under their standard terms and applicable data-protection obligations. Where required, we enter into Data Processing Agreements (DPAs) with our providers, and Standard Contractual Clauses (SCCs) or equivalent safeguards are relied upon for international data transfers where applicable. Each provider is obligated to process your data only as needed to perform its service and to maintain appropriate security measures. We review our providers' security practices and compliance.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>11. Contact</h2>
+        <p>For questions about how your data is used, please contact us at <a href="mailto:data@getcloserai.com">data@getcloserai.com</a>.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">♥</div>
+        <span class="nav-logo-text">Closer</span>
+      </div>
+      <div class="footer-links">
+        <a href="/support">Support</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/legal/data-usage-policy">Data Usage Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Closer AI. Closer is an educational tool and is not a substitute for professional therapy or counseling.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
