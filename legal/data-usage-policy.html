@@ -28,7 +28,7 @@
   <section class="hero" style="padding-bottom: 40px;">
     <div class="container">
       <h1 class="hero-title" style="font-size: clamp(28px, 4vw, 42px);">Data Usage Policy</h1>
-      <p class="hero-subtitle" style="font-size: 15px;">Last updated: July 19, 2026 &middot; Version 1.5</p>
+      <p class="hero-subtitle" style="font-size: 15px;">Last updated: July 20, 2026 &middot; Version 1.6</p>
     </div>
   </section>
 
@@ -50,7 +50,7 @@
         <h3>2.3 Transcription</h3>
         <p>A Supabase Edge Function sends the audio recording to Deepgram for speech-to-text transcription. The resulting transcript text is stored in the database, associated with your recording. Deepgram processes the audio solely to produce the transcript, and we send the request with model-training opt-out enabled so your audio is not used to train Deepgram's models.</p>
         <h3>2.4 Post-Transcription Audio Storage &amp; Retention</h3>
-        <p>When a recording is created, its original audio receives a fixed deletion date. New users may choose 90 days, 6 months, or 12 months; existing 7-day and 30-day settings remain honored until changed. For a shared recording, the shorter participant setting controls. Settings changes apply to future recordings only. The transcript is stored separately and is not automatically deleted with the audio. Audio files are never sent to AI analysis providers — only transcript text is used for AI analysis.</p>
+        <p>When a recording is created, its audio receives a fixed deletion date 90 days later. Existing recordings already assigned a 7-day or 30-day deadline keep that shorter date. Before the deadline, both original participants may approve one additional 180 days; the extension cannot renew or stack, and either participant may end it. The full transcript is stored separately and receives its own fixed 12-month deletion date. Audio files are never sent to AI analysis providers — only transcript text is used for AI analysis.</p>
       </div>
 
       <div class="legal-section">
@@ -84,8 +84,8 @@
         <p>Before each recording begins, both partners must each enter their own private consent PIN on the same device. Recording requires a linked partner and is not available solo, so every conversation captured carries the active, on-device consent of both partners. You remain responsible for complying with the recording-consent laws in your jurisdiction.</p>
         <h3>5.3 Transcript Mutual Approval</h3>
         <p>Sharing full transcripts between partners requires explicit approval from both parties on a per-transcript basis.</p>
-        <h3>5.4 Audio Retention Exception</h3>
-        <p>Either participant may ask to keep a specific audio recording past its fixed deletion date. The exception takes effect only if both original participants approve before the deadline. A pending request does not pause deletion. Either participant may later withdraw their own approval, returning the audio to its original schedule; if that date has passed, the cleanup service removes it.</p>
+        <h3>5.4 Audio Retention Extension</h3>
+        <p>Either participant may request one additional 180 days for a specific audio recording. The extension takes effect only if both original participants approve before the original deadline. It cannot renew or stack, and a pending request does not pause deletion. Either participant may later withdraw their own approval, returning the audio to its original schedule; if that date has passed, the cleanup service removes it.</p>
       </div>
 
       <div class="legal-section">
@@ -95,16 +95,16 @@
 
       <div class="legal-section">
         <h2>7. Data Minimization</h2>
-        <p>We follow the principle of data minimization. We only collect information that is necessary to provide the service. Audio recordings are only created when you actively initiate a recording with consent. Transcripts are generated solely to enable AI analysis and your review. AI analysis is limited to generating summaries and insights relevant to your relationship goals. Account information collected during onboarding is limited to what is needed for the service to function.</p>
+        <p>We follow the principle of data minimization. We only collect information that is necessary to provide the service. Audio recordings are only created when you actively initiate a recording with consent. Audio is time-limited, and full transcripts are generated solely to enable AI analysis and your review before their 12-month deletion date. When the transcript is deleted, source-heavy intermediate analysis is also removed and the retained insight history is reduced to summaries, patterns, and no more than ten short excerpts. Account information collected during onboarding is limited to what is needed for the service to function.</p>
       </div>
 
       <div class="legal-section">
         <h2>8. Data Retention &amp; Deletion</h2>
         <p>You have full control over your data:</p>
         <h3>8.1 Automatic Retention Policy</h3>
-        <p>Raw audio is automatically deleted on the fixed date assigned when the recording was created, unless both participants approve a recording-specific keep exception. New selectable periods are 90 days, 6 months, and 12 months; existing 7-day and 30-day selections remain effective until changed. The shorter participant setting controls each new shared recording. Full transcripts, AI-generated insights, patterns, and a limited number of short transcript excerpts remain with the conversation until a participant deletes the applicable data or the conversation is deleted through full deletion, unlinking, or account deletion.</p>
+        <p>Raw audio is automatically deleted 90 days after recording unless both participants approve the one permitted 180-day extension. Existing recordings already assigned a 7-day or 30-day deadline keep that shorter date. Full transcripts are automatically deleted after 12 months. Transcript deletion also removes speaker samples and source-heavy intermediate analysis; summaries, patterns, and no more than ten short transcript excerpts remain while the relationship history is active. Either participant may delete sooner. Conversations and retained history are also deleted through full deletion, unlinking, account deletion, or after both participants have been inactive for 24 months. Advance content-free notices are sent before scheduled audio and transcript deletion. A narrow, expiring legal hold may temporarily delay automatic deletion when legally required.</p>
         <h3>8.2 Individual Recording Deletion</h3>
-        <p>You may remove available components from the Conversations screen. Audio-only deletion is immediate for the recording owner and leaves the transcript and analysis. Transcript-only deletion removes the verbatim transcript and transcript-derived speaker samples for both participants, while limited short excerpts already embedded in retained insights may remain. Either partner may unilaterally schedule full deletion; no approval from the other is required. Full deletion uses a 7-day undo window and then permanently removes the audio, transcript, summaries, insights, short excerpts, and consent evidence.</p>
+        <p>You may remove available components from the Conversations screen. Audio-only deletion is immediate for the recording owner and leaves the transcript and analysis. Transcript-only deletion removes the verbatim transcript, transcript-derived speaker samples, legacy analysis, and source-heavy intermediate pipeline data for both participants. The retained insight snapshot may still contain summaries, patterns, and up to ten short excerpts. Either partner may unilaterally schedule full deletion; no approval from the other is required. Full deletion uses a 7-day undo window and then permanently removes the audio, transcript, summaries, insights, short excerpts, and consent evidence, subject only to a documented legal obligation.</p>
         <h3>8.3 Account Deletion</h3>
         <p>Deleting your account removes all of your data, including your profile, AI chat history, recordings, transcripts, summaries, and insights. If you are linked to a partner, deletion also unlinks the relationship and withdraws consent to retain shared recordings as described below: every recording attributed to the two of you is permanently deleted, regardless of which partner started it. Your partner's account and recordings not attributed to your relationship are not deleted. This action is permanent and cannot be undone.</p>
         <h3>8.4 Partner Unlinking</h3>
