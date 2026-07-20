@@ -1,2 +1,4 @@
 .DS_Store
 design_handoff_website_redesign/
+.vercel
+.env*
