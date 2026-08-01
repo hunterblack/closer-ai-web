@@ -29,9 +29,21 @@
 
   --radius:        18px;
   --radius-input:  12px;
+
+  /* height of the sticky nav — anchor targets are offset by this */
+  --nav-h:         72px;
 }
 
 html { scroll-behavior: smooth; }
+
+/*
+ * The nav is sticky and overlays the top of the viewport, so an anchor
+ * target scrolled flush to y=0 lands underneath it. Offset scroll targets
+ * by the nav height plus some breathing room.
+ */
+#early-access {
+  scroll-margin-top: calc(var(--nav-h) + 24px);
+}
 
 body {
   font-family: 'DM Sans', -apple-system, system-ui, sans-serif;
