@@ -96,9 +96,37 @@
     });
   }
 
+  // --- "Request access" links: land in the form ready to type ---------
+  // The scroll itself is CSS (#early-access has scroll-margin-top so it
+  // clears the sticky nav). This only moves the cursor into the field.
+  // preventScroll keeps focus() from yanking the page there instantly and
+  // cancelling the browser's smooth scroll.
+  function wireAnchorFocus() {
+    var links = document.querySelectorAll('a[href="#early-access"]');
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener('click', function () {
+        // Deferred to the next task on purpose: the browser's own fragment
+        // navigation runs after this handler and resets focus to <body>,
+        // so focusing synchronously here would be undone immediately.
+        setTimeout(function () {
+          // Re-query on each click: after a successful submit the form is
+          // replaced by the success message and the input is gone.
+          var input = document.querySelector('#early-access input[type="email"]');
+          if (!input) return;
+          try {
+            input.focus({ preventScroll: true });
+          } catch (e) {
+            input.focus();
+          }
+        }, 0);
+      });
+    }
+  }
+
   function init() {
     var forms = document.querySelectorAll('form.early-access-form');
     for (var i = 0; i < forms.length; i++) wireForm(forms[i]);
+    wireAnchorFocus();
   }
 
   if (document.readyState === 'loading') {
