@@ -54,7 +54,7 @@ body {
   overflow-x: hidden;
 }
 
-ion-icon { visibility: visible; }
+.feature-symbol { visibility: visible; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
 ::selection { background: rgba(224, 120, 48, 0.3); }
 
@@ -402,8 +402,9 @@ ion-icon { visibility: visible; }
   margin-bottom: 18px;
 }
 
-.feature-icon-badge ion-icon {
-  font-size: 21px;
+.feature-icon-badge .feature-symbol {
+  width: 21px;
+  height: 21px;
 }
 
 .feature-card h3 {
@@ -548,8 +549,9 @@ ion-icon { visibility: visible; }
   flex-shrink: 0;
 }
 
-.privacy-icon-badge ion-icon {
-  font-size: 20px;
+.privacy-icon-badge .feature-symbol {
+  width: 20px;
+  height: 20px;
   color: var(--growth);
 }
 
