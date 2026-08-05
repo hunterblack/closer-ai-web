@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "UQPSDXYDF9.com.closerai.app",
+        "components": [
+          {
+            "/": "/auth/callback",
+            "comment": "PKCE email confirmation, recovery, and OAuth callbacks"
+          }
+        ]
+      }
+    ]
+  }
+}
