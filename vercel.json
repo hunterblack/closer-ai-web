@@ -21,6 +21,10 @@
       ]
     }
   ],
+  "redirects": [
+    { "source": "/legal/privacy-policy", "destination": "/privacy", "permanent": true },
+    { "source": "/legal/terms-of-service", "destination": "/terms", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/ingest/static/:path*", "destination": "https://us-assets.i.posthog.com/static/:path*" },
     { "source": "/ingest/:path*", "destination": "https://us.i.posthog.com/:path*" }
