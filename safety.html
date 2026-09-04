@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Safety and Crisis Support — Closer</title>
+  <meta name="description" content="How Closer responds to disclosures of suicidal ideation, self-harm, and abuse — and the crisis resources available to you right now." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script defer src="/analytics.js"></script>
+  <style>
+    .crisis-box {
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--action-start);
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      margin-bottom: 48px;
+    }
+    .crisis-box p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--text-card);
+      margin: 0 0 14px;
+    }
+    .crisis-box p:last-child { margin-bottom: 0; }
+    .crisis-box strong { color: var(--text-1); }
+    .crisis-box a {
+      color: var(--action-soft);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .crisis-box a:hover { text-decoration: underline; }
+    .referral-quote {
+      border-left: 2px solid var(--border);
+      padding: 4px 0 4px 18px;
+      margin: 16px 0 18px;
+    }
+    .referral-quote p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-card);
+      margin: 0;
+    }
+    .legal-section ul {
+      margin: 0 0 12px;
+      padding-left: 20px;
+    }
+    .legal-section li {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" style="text-decoration:none;">
+        <div class="nav-logo">
+          <div class="nav-logo-icon">♥</div>
+          <span class="nav-logo-text">Closer</span>
+        </div>
+      </a>
+      <a href="https://apps.apple.com/app/id6759992824" class="btn btn-small" target="_blank" rel="noopener noreferrer">Download</a>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-bottom: 40px;">
+    <div class="container">
+      <h1 class="hero-title" style="font-size: clamp(28px, 4vw, 42px);">Safety and crisis support</h1>
+      <p class="hero-subtitle" style="font-size: 15px;">How Closer responds to crisis disclosures, and where to get help right now.</p>
+    </div>
+  </section>
+
+  <section style="padding: 0 0 80px;">
+    <div class="container legal-content">
+
+      <div class="crisis-box">
+        <p><strong>If you are in immediate danger, call <a href="tel:911">911</a>.</strong></p>
+        <p><strong>If you are thinking about suicide or self-harm</strong>, call or text <strong><a href="tel:988">988</a></strong> (the 988 Suicide &amp; Crisis Lifeline, available 24/7 in the US), or text <strong>HOME</strong> to <strong><a href="sms:741741">741741</a></strong> to reach the Crisis Text Line.</p>
+        <p><strong>If you are experiencing abuse or coercive control in your relationship</strong>, the National Domestic Violence Hotline is available 24/7 at <strong><a href="tel:18007997233">1-800-799-7233</a></strong> or at <a href="https://www.thehotline.org" target="_blank" rel="noopener noreferrer">thehotline.org</a>.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>What Closer is, and what it is not</h2>
+        <p>Closer is an educational tool for couples who want to communicate better. It records conversations you choose to record, analyzes them, and explains what it found.</p>
+        <p><strong>Closer is not a therapist, a counselor, or a crisis service.</strong> No part of it is staffed by a human, monitored in real time, or able to respond to an emergency. Nothing in the app should be relied on in place of professional care or emergency services.</p>
+        <p>Closer Chat, the in-app assistant, is artificial intelligence. That is disclosed on the screen every time you use it. It is built to explain your own conversation insights and to teach general communication skills — it does not provide therapy, emotional support, or advice about crises.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>How Closer responds to crisis disclosures</h2>
+        <p>We maintain a protocol for detecting expressions of suicidal ideation, self-harm, and intimate-partner abuse, and for responding to them with crisis referrals rather than with coaching. It works in two places.</p>
+
+        <h3>1. In Closer Chat</h3>
+        <p>Every message you send is screened <strong>before</strong> the assistant composes any reply. The screening step is a separate, dedicated classifier — not the assistant itself — that reads your message together with the immediately preceding turns and sorts it into one of three categories: an ordinary message, a possible expression of suicidal ideation or self-harm, or a description of coercive or abusive dynamics.</p>
+        <p>If the screening step flags a message, <strong>the assistant does not answer it.</strong> Its output is discarded and replaced with a fixed referral written in advance. The AI is never asked to improvise a response to a crisis, and it is never asked to decide whether a crisis is serious enough to warrant one.</p>
+        <p>For suicidal ideation or self-harm, the fixed response is:</p>
+        <div class="referral-quote">
+          <p>I'm really glad you said something, and I want to make sure you're supported — this is beyond what Closer can help with. Please reach out to the 988 Suicide &amp; Crisis Lifeline: call or text 988. If you're in immediate danger, call 911. You don't have to go through this alone.</p>
+        </div>
+        <p>For coercive or abusive dynamics, the fixed response refers you to the National Domestic Violence Hotline at 1-800-799-7233 and to thehotline.org.</p>
+        <p>The assistant is separately instructed never to discuss methods of self-harm, never to characterize anyone clinically, never to contact third parties, and never to promise confidentiality.</p>
+        <p><strong>If the screening step itself fails</strong>, Closer does not fall back to answering your message. It declines to respond at all and asks you to try again. We would rather show you an error than an unscreened reply, and the failure raises an internal alert.</p>
+
+        <h3>2. In conversation analysis</h3>
+        <p>When Closer analyzes a recorded conversation, the analysis can detect signals of suicidality, acute hopelessness, or coercive control in what was said. When it does, <strong>that conversation's own results are replaced by support resources</strong> — you are not shown communication coaching, patterns, or scores for it. Closer does not try to coach a conversation like that.</p>
+
+        <h3>Everywhere in the app</h3>
+        <p>Crisis and support resources are always available in Settings → Safety &amp; Professional Resources, whether or not anything has been flagged: the 988 Lifeline, the Crisis Text Line, the National Domestic Violence Hotline, and a directory for finding a therapist.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>How we know it works</h2>
+        <p>Automated detection is imperfect, and we do not claim otherwise. <strong>No automated system catches every expression of distress, and Closer's will sometimes miss one or flag a message that was not a crisis.</strong> Please do not rely on it to notice that you need help. Reach out directly to the resources at the top of this page.</p>
+        <p>What we can do is measure it. We maintain a labeled set of test messages — explicit and indirect expressions of suicidal ideation, descriptions of coercion and abuse, and ordinary difficult relationship messages that must <em>not</em> be routed to crisis resources — and we run them against the live system, not against a copy of it. We do this whenever the classifier, its underlying model, or the referral copy changes, and we treat a miss as a reason not to ship that change.</p>
+        <p>Two kinds of error matter, and we track both. A missed crisis is the more serious one. But routing an ordinary hard conversation about a relationship to a suicide hotline is also a real harm: it is alarming, it is condescending, and it teaches people to ignore the referral when it counts.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>What we record, and what we do not</h2>
+        <p>When Closer issues a crisis referral, it increments a <strong>counter</strong>. That is all the referral itself records. The stored record is a date, which category of referral it was, and a running total.</p>
+        <p><strong>The counter holds nothing that identifies you.</strong> It does not record who received a referral, what they wrote, or when any individual person received one. There is no flag on your account. Nobody is notified — not your partner, not us, not anyone else, and we do not contact users about crisis disclosures. The counter is built so that it could not be used to identify a person in crisis, even if someone asked us to.</p>
+        <p>The counter exists because California law requires operators to report annually how many crisis referrals they issued. That report contains counts only; state law also requires it to exclude any identifiers or personal information about users.</p>
+        <p><strong>Your message itself is a separate matter, and we want to be precise about it.</strong> A message you send in Closer Chat is part of your chat history, and it is stored like the rest of that history — encrypted, subject to Closer's ordinary <a href="/privacy">Privacy Policy</a> and retention schedule — whether or not it triggered a referral. Sending something that leads to a crisis referral does not cause it to be stored, and it does not cause it to be deleted either. You can delete that chat, and the retention schedule applies to it the same as to anything else.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Age</h2>
+        <p>Closer is for adults. You must be 18 or older to create an account, and the app is not directed to or intended for anyone under 18. If we learn that we have collected information from someone under 18, we delete it. See the <a href="/privacy">Privacy Policy</a> for details.</p>
+      </div>
+
+      <div class="legal-section">
+        <h2>Questions or concerns</h2>
+        <p>If you believe Closer responded badly to a crisis disclosure — either by missing one or by over-reacting to an ordinary message — please tell us at <a href="mailto:support@getcloserai.com">support@getcloserai.com</a>. Reports of that kind directly improve the test set described above.</p>
+        <p style="color: var(--text-3); font-size: 14px; margin-top: 24px;"><em>Last reviewed: September 4, 2026</em></p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">♥</div>
+        <span class="nav-logo-text">Closer</span>
+      </div>
+      <div class="footer-links">
+        <a href="/support">Support</a>
+        <a href="/safety">Safety</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/legal/data-usage-policy">Data Usage Policy</a>
+        <a href="/terms">Terms of Service</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Closer AI. Closer is an educational tool and is not a substitute for professional therapy or counseling.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
