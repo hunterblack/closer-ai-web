@@ -82,8 +82,8 @@
     <div class="container legal-content">
 
       <div class="crisis-box">
-        <p><strong>If you are in immediate danger, call 911.</strong></p>
-        <p><strong>If you are thinking about suicide or self-harm</strong>, call or text <strong><a href="tel:988">988</a></strong> (the 988 Suicide &amp; Crisis Lifeline, available 24/7 in the US), or text <strong>HOME</strong> to <strong>741741</strong> to reach the Crisis Text Line.</p>
+        <p><strong>If you are in immediate danger, call <a href="tel:911">911</a>.</strong></p>
+        <p><strong>If you are thinking about suicide or self-harm</strong>, call or text <strong><a href="tel:988">988</a></strong> (the 988 Suicide &amp; Crisis Lifeline, available 24/7 in the US), or text <strong>HOME</strong> to <strong><a href="sms:741741">741741</a></strong> to reach the Crisis Text Line.</p>
         <p><strong>If you are experiencing abuse or coercive control in your relationship</strong>, the National Domestic Violence Hotline is available 24/7 at <strong><a href="tel:18007997233">1-800-799-7233</a></strong> or at <a href="https://www.thehotline.org" target="_blank" rel="noopener noreferrer">thehotline.org</a>.</p>
       </div>
 
@@ -110,7 +110,7 @@
         <p><strong>If the screening step itself fails</strong>, Closer does not fall back to answering your message. It declines to respond at all and asks you to try again. We would rather show you an error than an unscreened reply, and the failure raises an internal alert.</p>
 
         <h3>2. In conversation analysis</h3>
-        <p>When Closer analyzes a recorded conversation, the analysis can detect signals of suicidality, acute hopelessness, or coercive control in what was said. When it does, the normal output is <strong>suppressed entirely</strong> — no communication coaching, no patterns, no scores — and the conversation shows support resources instead.</p>
+        <p>When Closer analyzes a recorded conversation, the analysis can detect signals of suicidality, acute hopelessness, or coercive control in what was said. When it does, <strong>that conversation's own results are replaced by support resources</strong> — you are not shown communication coaching, patterns, or scores for it. Closer does not try to coach a conversation like that.</p>
 
         <h3>Everywhere in the app</h3>
         <p>Crisis and support resources are always available in Settings → Safety &amp; Professional Resources, whether or not anything has been flagged: the 988 Lifeline, the Crisis Text Line, the National Domestic Violence Hotline, and a directory for finding a therapist.</p>
@@ -119,16 +119,16 @@
       <div class="legal-section">
         <h2>How we know it works</h2>
         <p>Automated detection is imperfect, and we do not claim otherwise. <strong>No automated system catches every expression of distress, and Closer's will sometimes miss one or flag a message that was not a crisis.</strong> Please do not rely on it to notice that you need help. Reach out directly to the resources at the top of this page.</p>
-        <p>What we can do is measure it and keep measuring it. We maintain a labeled set of test messages — explicit and indirect expressions of suicidal ideation, passive ideation, self-harm, abuse and coercion, and a deliberately large set of ordinary difficult relationship messages that must <em>not</em> be routed to crisis resources — and we run the live system against it. We do this whenever the classifier, its underlying model, or the referral copy changes, and we keep the results so that changes in accuracy over time are visible rather than discovered by a user.</p>
+        <p>What we can do is measure it. We maintain a labeled set of test messages — explicit and indirect expressions of suicidal ideation, descriptions of coercion and abuse, and ordinary difficult relationship messages that must <em>not</em> be routed to crisis resources — and we run them against the live system, not against a copy of it. We do this whenever the classifier, its underlying model, or the referral copy changes, and we treat a miss as a reason not to ship that change.</p>
         <p>Two kinds of error matter, and we track both. A missed crisis is the more serious one. But routing an ordinary hard conversation about a relationship to a suicide hotline is also a real harm: it is alarming, it is condescending, and it teaches people to ignore the referral when it counts.</p>
       </div>
 
       <div class="legal-section">
         <h2>What we record, and what we do not</h2>
-        <p>When Closer issues a crisis referral, it increments a <strong>counter</strong>. That is all. The stored record is a date, which category of referral it was, and a running total.</p>
-        <p>We do not store who received a referral, what they wrote, or when any individual person received one. There is no flag on your account. Nobody is notified — not your partner, not us, not anyone else. We do not contact users about crisis disclosures, and we have deliberately built the system so that we could not identify one after the fact even if we were asked to.</p>
+        <p>When Closer issues a crisis referral, it increments a <strong>counter</strong>. That is all the referral itself records. The stored record is a date, which category of referral it was, and a running total.</p>
+        <p><strong>The counter holds nothing that identifies you.</strong> It does not record who received a referral, what they wrote, or when any individual person received one. There is no flag on your account. Nobody is notified — not your partner, not us, not anyone else, and we do not contact users about crisis disclosures. The counter is built so that it could not be used to identify a person in crisis, even if someone asked us to.</p>
         <p>The counter exists because California law requires operators to report annually how many crisis referrals they issued. That report contains counts only; state law also requires it to exclude any identifiers or personal information about users.</p>
-        <p>Chat content itself is subject to Closer's ordinary <a href="/privacy">Privacy Policy</a> and retention schedule, and is encrypted.</p>
+        <p><strong>Your message itself is a separate matter, and we want to be precise about it.</strong> A message you send in Closer Chat is part of your chat history, and it is stored like the rest of that history — encrypted, subject to Closer's ordinary <a href="/privacy">Privacy Policy</a> and retention schedule — whether or not it triggered a referral. Sending something that leads to a crisis referral does not cause it to be stored, and it does not cause it to be deleted either. You can delete that chat, and the retention schedule applies to it the same as to anything else.</p>
       </div>
 
       <div class="legal-section">
