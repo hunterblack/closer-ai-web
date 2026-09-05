@@ -1,0 +1,36 @@
+name: Links
+
+# Split deliberately into two jobs.
+#
+# "Internal" touches no network: it resolves site-relative links against the
+# filesystem the way Vercel serves them and verifies every #fragment exists.
+# It cannot flake, so a red X here always means a real broken link.
+#
+# "External" depends on other people's servers, so it can go red for reasons
+# that are not our fault. It runs weekly as well as on pull requests, because
+# the failure it exists to catch — a URL that dies after we ship it — does not
+# happen at commit time. That is what happened with the App Store CTA in #8.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # Mondays, 14:00 UTC.
+    - cron: "0 14 * * 1"
+  workflow_dispatch:
+
+jobs:
+  internal:
+    name: Internal links and fragments
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check-links.py --internal
+
+  external:
+    name: External URLs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/check-links.py --external
