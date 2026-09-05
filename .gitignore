@@ -2,3 +2,7 @@
 design_handoff_website_redesign/
 .vercel
 .env*
+
+# Supabase CLI scratch state. Nothing here uses Supabase; the CLI writes this
+# when it is run with this folder as its working directory by mistake.
+supabase/
