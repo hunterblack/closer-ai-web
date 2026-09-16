@@ -1,15 +1,26 @@
 /*
  * Closer AI — website analytics
  * ------------------------------------------------------------------
- * PostHog, configured for a privacy-first, cookieless setup:
- *   - persistence: 'memory'  -> no cookies, no localStorage (no consent banner)
- *   - autocapture off        -> we only send the events we choose
+ * PostHog, with session replay enabled for the marketing site.
+ *
+ *   - persistence: 'localStorage+cookie' -> stable identity across pages
+ *   - autocapture on         -> replay is far less useful without the
+ *                               click/input events that annotate it
+ *   - session replay on      -> see where visitors stall before the
+ *                               waitlist form
  *   - reverse-proxied via /ingest (see vercel.json) so requests come
  *     from our own domain and survive ad-blockers
  *
- * TO ACTIVATE: paste your PostHog *public* project key (phc_...) below.
- * Until then this file is inert — it upgrades the forms to AJAX but
- * sends no analytics.
+ * WHY persistence changed (2026-09-16): the site is multi-page static
+ * HTML, so 'memory' persistence minted a NEW distinct_id and a NEW
+ * session on every navigation. One visitor reading index -> privacy ->
+ * safety was recorded as three unrelated strangers, and replays would
+ * have been one-page fragments. Cookies are now disclosed in the
+ * Privacy Policy (§5.6) and Cookie Notice.
+ *
+ * MASKING: the waitlist email input is masked (`ph-no-capture`) so
+ * replays never contain a visitor's email address. Everything else on
+ * these pages is public marketing copy.
  *
  * US cloud is assumed. On EU cloud, change the rewrite hosts in
  * vercel.json to eu.i.posthog.com / eu-assets.i.posthog.com and set
@@ -28,13 +39,22 @@
     window.posthog.init(POSTHOG_KEY, {
       api_host: '/ingest',
       ui_host: 'https://us.posthog.com',
-      persistence: 'memory',          // cookieless
-      autocapture: false,             // explicit events only
+      persistence: 'localStorage+cookie',
+      autocapture: true,              // annotates replays with click/change events
       capture_pageview: true,
       capture_pageleave: true,
-      disable_session_recording: true,
+      disable_session_recording: false,
       person_profiles: 'identified_only',
-      respect_dnt: true
+      respect_dnt: true,
+      session_recording: {
+        // Mask the waitlist email field. `maskAllInputs: false` keeps the
+        // rest of the page (public marketing copy) readable in replay,
+        // while maskInputOptions + the .ph-no-capture class on the email
+        // input keep the one piece of personal data out of the recording.
+        maskAllInputs: false,
+        maskInputOptions: { email: true, password: true },
+        maskTextSelector: '.ph-no-capture'
+      }
     });
   }
 
