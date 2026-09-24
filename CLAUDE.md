@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Static marketing/legal site for [getcloserai.com](https://getcloserai.com), deployed to Vercel. Waitlist landing page, legal docs, and the SB 243 safety page for the [closer-ai-mobile](../closer-ai-mobile) app (a separate repo — see that repo's `CLAUDE.md` for the app itself). No build step: plain HTML/CSS/JS served directly.
+Static marketing/legal site for [getcloserai.com](https://getcloserai.com), deployed to Vercel. Waitlist landing page, legal docs, and the SB 243 safety page for the [closer-ai-mobile](https://github.com/hunterblack/closer-ai-mobile) app (a separate repo, sibling checkout `../closer-ai-mobile` — see that repo's `CLAUDE.md` for the app itself). No build step: plain HTML/CSS/JS served directly.
 
 ## Key Files
 

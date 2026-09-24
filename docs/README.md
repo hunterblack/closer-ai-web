@@ -10,6 +10,9 @@ Nothing here yet — add a file and a line below when something outgrows `CLAUDE
 
 ## Depends on (in the sibling `closer-ai-mobile` repo)
 
-- [`../../closer-ai-mobile/docs/legal/crisis-response-protocol.md`](../../closer-ai-mobile/docs/legal/crisis-response-protocol.md) — `safety.html` must stay factually consistent with this
-- [`../../closer-ai-mobile/docs/legal/`](../../closer-ai-mobile/docs/legal/) — legal review notes backing `privacy.html` / `terms.html` / `legal/data-usage-policy.html`
-- [`../../closer-ai-mobile/docs/privacy/`](../../closer-ai-mobile/docs/privacy/) — retention/data-inventory docs referenced by the privacy page
+These are GitHub links, since a relative path here would resolve inside this repo, not across
+into `closer-ai-mobile`. Local sibling checkout equivalents are `../../closer-ai-mobile/docs/...`.
+
+- [docs/legal/crisis-response-protocol.md](https://github.com/hunterblack/closer-ai-mobile/blob/main/docs/legal/crisis-response-protocol.md) — `safety.html` must stay factually consistent with this
+- [docs/legal/](https://github.com/hunterblack/closer-ai-mobile/tree/main/docs/legal) — legal review notes backing `privacy.html` / `terms.html` / `legal/data-usage-policy.html`
+- [docs/privacy/](https://github.com/hunterblack/closer-ai-mobile/tree/main/docs/privacy) — retention/data-inventory docs referenced by the privacy page
